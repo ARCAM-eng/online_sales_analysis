@@ -1,0 +1,7 @@
+# Se ignora config.json
+config.json
+
+# Se ignora toate formatele de mai jos
+*.png
+*.jpg
+*.jpeg
