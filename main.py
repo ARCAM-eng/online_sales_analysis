@@ -11,7 +11,8 @@ def main():
         print("1. Adaugare produs")
         print("2. Afisare toate produsele")
         print("3. Calcul valoare totala inventar")
-        print("4. Iesire")
+        print("4. Eliminare produs")
+        print("5. Iesire")
         
         choice = input("Alegeti o opțiune : ")
 
@@ -30,8 +31,13 @@ def main():
         elif choice == "3":
             # Calcul valoare totala stoc
             manager.calculate_total_value()
-
+        
         elif choice == "4":
+            # Eliminare produs
+            name = input("Introduceți numele produsului de eliminat: ")
+            manager.remove_product(name)
+
+        elif choice == "5":
             # Iesire din program
             print("Iesire din program.")
             break

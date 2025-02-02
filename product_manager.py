@@ -20,3 +20,11 @@ class ProductManager:
     def calculate_total_value(self):
         total_value = sum(product.price * product.quantity for product in self.products)
         print(f"Valoarea totala a stocului este: {total_value}")
+        
+    def remove_product(self, name):
+     for product in self.products:
+        if product.name == name:
+            self.products.remove(product)
+            print(f"Produsul {name} a fost eliminat.")
+            return
+     print(f"Produsul {name} nu a fost gasit.")
