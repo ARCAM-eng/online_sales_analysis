@@ -9,10 +9,8 @@ def main():
         # Meniu interactiv
         print("\n--- Meniu ---")
         print("1. Adaugare produs")
-        print("2. Afisare toate produsele")
-        print("3. Calcul valoare totala inventar")
-        print("4. Eliminare produs")
-        print("5. Iesire")
+        print("2. Eliminare produs")
+        print("3. Iesire")
         
         choice = input("Alegeti o opțiune : ")
 
@@ -23,21 +21,13 @@ def main():
             quantity = int(input("Introduceti cantitatea : "))
             manager.add_product(name, price, quantity)
 
+             
         elif choice == "2":
-            # Afisare toate produsele
-            print("\nToate produsele:")
-            manager.display_all_products()
-
-        elif choice == "3":
-            # Calcul valoare totala stoc
-            manager.calculate_total_value()
-        
-        elif choice == "4":
             # Eliminare produs
             name = input("Introduceți numele produsului de eliminat: ")
             manager.remove_product(name)
 
-        elif choice == "5":
+        elif choice == "3":
             # Iesire din program
             print("Iesire din program.")
             break
